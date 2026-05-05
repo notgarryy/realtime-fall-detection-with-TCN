@@ -22,7 +22,6 @@ Overview of the proposed method:
 
 - Real-time human activity recognition and fall detection
 - TCN (Temporal Convolutional Network) for spatiotemporal feature extraction
-- DBSCAN-based point cloud clustering for noise filtering
 - Visual real-time output with activity classification display
 - Tested on Texas Instruments IWR6843AOPEVM radar
 
@@ -35,7 +34,7 @@ Overview of the proposed method:
 | Berdiri | Standing |
 | Duduk | Sitting |
 | Bungkuk | Bending |
-| Jatuh | Fall ⚠️ |
+| Jatuh | **Fall**  |
 
 ---
 
@@ -54,15 +53,14 @@ Overview of the proposed method:
 
 The TCN model captures spatiotemporal features from radar point cloud sequences using:
 - **Temporal Convolutional Networks** for sequential activity recognition
-- **FMCW radar point cloud data** as input — x, y, z coordinates, Doppler velocity, and SNR
-- **DBSCAN clustering** for isolating the dominant human target from noise
+- **FMCW radar point cloud data** as input — x, y, z coordinates, velocities, and accelerations
 - **Sliding window** approach for continuous real-time inference
 
 ---
 
 ## Requirements
 
-- Windows OS (tested on Windows 10/11)
+- Windows OS (tested on Windows 10)
 - Python 3.10.0
 - Texas Instruments IWR6843AOPEVM radar sensor
 
